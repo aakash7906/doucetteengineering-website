@@ -3,15 +3,15 @@ import { useLocation } from 'react-router-dom'
 import { 
   Phone, 
   Mail, 
-  MapPin, 
+  // MapPin, 
   Clock, 
   CheckCircle2, 
-  Send, 
+  // Send, 
   ShieldCheck, 
   ArrowRight, 
-  Calendar,
-  AlertCircle,
-  FileText
+  // Calendar,
+  // AlertCircle,
+  // FileText
 } from 'lucide-react'
 import confetti from 'canvas-confetti'
 import { ASSETS } from '@/data/assets'

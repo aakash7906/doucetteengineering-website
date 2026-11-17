@@ -521,7 +521,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                   Estimate engineering fees, perc testing costs, municipal town filing charges, and contractor construction ranges based on bedroom count and lot constraints.
                 </p>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-300">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-300">
                   <div className="p-3 rounded-sm bg-white/5 border border-white/10">
                     <span className="text-primary font-bold block text-sm">3-4 Bedrooms</span>
                     <span>Most Common ($22k - $27k typical total)</span>

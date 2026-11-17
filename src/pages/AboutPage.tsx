@@ -113,7 +113,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
                 <img
                   src={ASSETS.engineerPortrait}
                   alt="Robert Doucette, P.E. - Massachusetts Civil Engineer"
-                  className="w-full h-[440px] object-cover"
+                  className="w-full h-[320px] sm:h-[440px] object-cover"
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />

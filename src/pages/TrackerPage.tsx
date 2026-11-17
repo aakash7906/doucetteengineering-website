@@ -154,7 +154,7 @@ export const TrackerPage: React.FC = () => {
                       style={{ width: `${selectedProject.percentComplete}%` }} 
                     />
                   </div>
-                  <div className="flex justify-between text-[11px] text-muted-foreground mt-1.5 font-medium">
+                  <div className="flex justify-between text-[9px] min-[400px]:text-[11px] text-muted-foreground mt-1.5 font-medium">
                     <span>Soil Testing</span>
                     <span>CAD Design</span>
                     <span>Town Board of Health</span>
