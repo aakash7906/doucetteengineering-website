@@ -74,10 +74,7 @@ export const TrackerPage: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Client &amp; Contractor Portal</span>
-          </div>
+          
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             Live Permit &amp; Engineering Tracker
@@ -85,9 +82,7 @@ export const TrackerPage: React.FC = () => {
 
           <div className="w-16 h-0.5 bg-primary mx-auto" />
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-sm">
-            Track your deep hole soil testing logs, CAD site design progress, and municipal Board of Health hearing schedules in real time.
-          </p>
+         
 
           {/* Search Bar Input */}
           <form onSubmit={handleSearch} className="max-w-2xl mx-auto w-full flex flex-col sm:flex-row gap-2 pt-2">
@@ -105,25 +100,7 @@ export const TrackerPage: React.FC = () => {
               Search Permit
             </button>
           </form>
-
-          {/* Quick Demo Pickers */}
-          <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300 pt-1">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400">Demo Tracking Numbers:</span>
-            {INITIAL_PROJECTS.slice(0, 3).map((proj) => (
-              <button
-                key={proj.id}
-                type="button"
-                onClick={() => setSelectedProject(proj)}
-                className={`px-2.5 py-1 rounded-sm font-mono text-[11px] transition-all cursor-pointer ${
-                  selectedProject.id === proj.id
-                    ? 'bg-primary text-white font-bold'
-                    : 'bg-black/40 backdrop-blur-md border border-white/15 text-slate-200 hover:bg-white/15'
-                }`}
-              >
-                {proj.trackingNumber} ({proj.city})
-              </button>
-            ))}
-          </div>
+          
 
         </div>
       </section>

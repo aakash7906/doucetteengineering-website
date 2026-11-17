@@ -77,10 +77,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Direct Review by Robert Doucette, P.E.</span>
-          </div>
+        
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             Request an Engineering Consultation

@@ -60,8 +60,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
         {/* Background Project Image with High-Visibility Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src={ASSETS.heroDrone}
-            alt="Massachusetts Civil Engineering Excellence"
+            src={ASSETS.engineerFieldInspection}
+            alt="Robert Doucette, P.E. Field Inspection and Civil Engineering"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-slate-950/45" />
@@ -69,10 +69,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Principal Engineer Profile &amp; Firm History</span>
-          </div>
+          
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             Engineering Excellence Rooted in Local Communities

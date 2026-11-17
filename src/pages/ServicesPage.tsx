@@ -60,20 +60,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Massachusetts Civil &amp; Title 5 Disciplines</span>
-          </div>
+          
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             From Start To Finish
           </h1>
 
-          <div className="w-16 h-0.5 bg-primary mx-auto" />
+          <div className="w-25 h-0.5 bg-primary mx-auto" />
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-sm">
-            From preliminary test pits to municipal Board of Health hearing defense and final as-built sign-offs, we deliver stamped engineering plans with zero bureaucratic delays.
-          </p>
+  
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <button

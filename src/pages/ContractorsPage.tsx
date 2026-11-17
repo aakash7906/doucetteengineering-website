@@ -53,10 +53,6 @@ export const ContractorsPage: React.FC<ContractorsPageProps> = ({ onOpenConsulta
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Licensed Installers, Excavators &amp; Custom Builders</span>
-          </div>
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             The Contractor's Engineering Partner
@@ -64,9 +60,9 @@ export const ContractorsPage: React.FC<ContractorsPageProps> = ({ onOpenConsulta
 
           <div className="w-16 h-0.5 bg-primary mx-auto" />
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-sm">
+          {/* <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-sm">
             We know your machines can't sit idle waiting on delayed plans or unresponsive engineers. Robert Doucette, P.E. provides rapid test pit scheduling, buildable CAD drawings, and immediate construction sign-offs.
-          </p>
+          </p> */}
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <button
@@ -177,6 +173,21 @@ export const ContractorsPage: React.FC<ContractorsPageProps> = ({ onOpenConsulta
                   <a href="tel:9783694200" className="text-primary font-bold hover:underline">
                     (978) 369-4200 ext 12
                   </a>
+                </div>
+              </div>
+
+              {/* Machinery & Field Excavation Showcase */}
+              <div className="relative rounded-sm overflow-hidden border border-slate-200 shadow-sm aspect-[16/9] group">
+                <img
+                  src={ASSETS.excavatorCompact}
+                  alt="Compact Mini Excavator on Residential Site"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                  <div className="text-white text-xs">
+                    <span className="font-bold block">Deep Hole &amp; Test Pit Equipment Support</span>
+                    <span className="text-[11px] text-slate-300">Fast machine mobilization with Massachusetts licensed operators</span>
+                  </div>
                 </div>
               </div>
             </div>

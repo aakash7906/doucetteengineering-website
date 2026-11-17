@@ -101,10 +101,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenConsultati
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium tracking-[0.2em] uppercase text-slate-200">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Massachusetts 310 CMR 15.000 Cost Standards</span>
-          </div>
+          
 
           <h1 className="font-serif text-4xl sm:text-6xl font-medium text-white tracking-tight drop-shadow-md">
             Title 5 Septic Cost Estimator
@@ -112,9 +109,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenConsultati
 
           <div className="w-16 h-0.5 bg-primary mx-auto" />
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light drop-shadow-sm">
-            Get an accurate, transparent cost estimate for soil testing, CAD engineering design, Board of Health filings, and contractor installation.
-          </p>
+          
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <button
@@ -172,7 +167,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenConsultati
                         key={num}
                         type="button"
                         onClick={() => setBedrooms(num)}
-                        className={`py-2.5 rounded-sm font-bold text-xs sm:text-sm border transition-all cursor-pointer ${
+                        className={`py-2 sm:py-2.5 px-1 rounded-sm font-bold text-[11px] sm:text-sm border transition-all cursor-pointer ${
                           bedrooms === num
                             ? 'bg-primary text-white border-primary shadow-xs'
                             : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'

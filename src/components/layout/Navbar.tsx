@@ -19,11 +19,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const navLinks = [
     { name: 'HOME', path: '/' },
     { name: 'SERVICES', path: '/services' },
-    { name: 'PERMIT TRACKER', path: '/tracker' },
-    { name: 'COST CALCULATOR', path: '/calculator' },
+    { name: 'TRACKER', fullName: 'PERMIT TRACKER', path: '/tracker' },
+    { name: 'CALCULATOR', fullName: 'COST CALCULATOR', path: '/calculator' },
     { name: 'CONTRACTORS', path: '/contractors' },
-    { name: 'TITLE 5 GUIDES', path: '/guides' },
-    { name: 'ABOUT P.E.', path: '/about' },
+    { name: 'GUIDES', fullName: 'TITLE 5 GUIDES', path: '/guides' },
+    { name: 'ABOUT', fullName: 'ABOUT P.E.', path: '/about' },
     { name: 'CONTACT', path: '/contact' },
   ]
 
@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } bg-white/85 backdrop-blur-md border-b border-slate-200/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] supports-[backdrop-filter]:bg-white/80`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 h-14 sm:h-16 flex items-center justify-between">
           
           {/* Brand Logo & Professional Engineer Credentials */}
           <Link
@@ -100,16 +100,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
               <Compass className="w-5 h-5 stroke-[2.2]" />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-sm sm:text-base tracking-tight text-foreground leading-none flex items-center gap-1">
+              <span className="font-extrabold text-sm sm:text-base tracking-tight text-foreground leading-none flex items-center gap-1 whitespace-nowrap">
                 DOUCETTE
                 <span className="text-primary font-black">ENGINEERING</span>
               </span>
-              
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-0.5">
+          <nav className="hidden xl:flex items-center h-full gap-0.5 2xl:gap-1.5">
             {navLinks.map((link) => {
               const isActive = link.path === '/' 
                 ? location.pathname === '/' 
@@ -118,46 +117,46 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 <NavLink
                   key={link.path}
                   to={link.path}
-                  className={`relative px-3 py-1.5 text-xs font-semibold tracking-[0.14em] uppercase transition-all rounded-sm ${
+                  className={`relative h-14 sm:h-16 flex items-center px-2.5 2xl:px-3 text-xs font-semibold tracking-[0.12em] uppercase whitespace-nowrap transition-colors ${
                     isActive
-                      ? 'text-primary font-bold after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary'
-                      : 'text-slate-700 hover:text-primary hover:bg-slate-100/70'
+                      ? 'text-primary font-bold after:absolute after:bottom-0 after:left-2 after:right-2 after:h-[2.5px] after:bg-primary'
+                      : 'text-slate-700 hover:text-primary hover:bg-slate-50/60'
                   }`}
                 >
-                  {link.name}
+                  <span className="hidden 2xl:inline">{link.fullName || link.name}</span>
+                  <span className="2xl:hidden">{link.name}</span>
                 </NavLink>
               )
             })}
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
-            <button
-              type="button"
-              onClick={onOpenConsultation}
-              className="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-sm border border-slate-200 bg-white/90 hover:bg-slate-50 hover:border-primary/50 text-slate-800 text-xs font-semibold tracking-[0.1em] uppercase transition-all shadow-2xs cursor-pointer"
-            >
-              <FileText className="w-3.5 h-3.5 text-primary" />
-              <span>Request Estimate</span>
-            </button>
-
+          <div className="hidden xl:flex items-center gap-2 2xl:gap-3 shrink-0">
             <a
               href="tel:9783694200"
-              className="inline-flex items-center gap-1.5 h-9 px-4 rounded-sm bg-primary text-white hover:bg-primary-hover text-xs font-semibold tracking-[0.1em] uppercase transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 h-9 px-3 2xl:px-4 rounded-sm bg-primary text-white hover:bg-primary-hover text-xs font-semibold tracking-[0.08em] uppercase whitespace-nowrap transition-all shadow-xs cursor-pointer"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-3.5 h-3.5 shrink-0" />
               <span>Call (978) 369-4200</span>
             </a>
           </div>
 
-          {/* Mobile Menu Trigger */}
-          <div className="flex items-center gap-1.5 xl:hidden">
+          {/* Mobile Menu Trigger & Quick Actions */}
+          <div className="flex items-center gap-1 xl:hidden">
+            <a
+              href="tel:9783694200"
+              className="p-2 text-primary hover:bg-slate-100 rounded-md"
+              aria-label="Call (978) 369-4200"
+            >
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+            </a>
+
             <button
               onClick={onOpenConsultation}
               className="p-2 text-primary hover:bg-slate-100 rounded-md"
               aria-label="Request Quote"
             >
-              <FileText className="w-5 h-5" />
+              <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
             <button
@@ -166,9 +165,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
               aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
               )}
             </button>
           </div>
@@ -194,7 +193,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                         : 'text-foreground hover:bg-slate-100'
                     }`}
                   >
-                    {link.name}
+                    {link.fullName || link.name}
                   </NavLink>
                 )
               })}
